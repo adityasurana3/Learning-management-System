@@ -5,6 +5,7 @@ from .models import Teacher
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, permissions, authentication
+from rest_framework_simplejwt.authentication import JWTAuthentication
 
 # Create your views here.
 class TeacherListCreateAPIView(generics.ListCreateAPIView):
@@ -19,3 +20,10 @@ class TeacherDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
 
+class Home(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        content = {'message': 'Hello, World!'}
+        return Response(content)
