@@ -1,4 +1,5 @@
 import About from "./About";
+import CourseDetail from "./CourseDetail";
 import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
@@ -11,6 +12,7 @@ function Main(){
         <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='/about' element={<About />}/>
+            <Route path='/detail/:course_id' element={<CourseDetail />}/>
         </Routes>
         <Footer />
         </>
