@@ -4,14 +4,24 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
-import UserRegister from "./user/UserRegister";
-import UserLogin from "./user/UserLogin";
-import Dashboard from "./user/Dashboard";
-import MyCourses from "./user/MyCourses";
-import FavouriteCourses from "./user/FavouriteCourses";
-import RecommendedCourses from "./user/RecommendedCourses";
-import ProfileSetting from "./user/ProfileSettings";
-import ChangePassword from "./user/ChangePassowrd";
+import UserRegister from "./User/UserRegister";
+import UserLogin from "./User/UserLogin";
+import Dashboard from "./User/Dashboard";
+import MyCourses from "./User/MyCourses";
+import FavouriteCourses from "./User/FavouriteCourses";
+import RecommendedCourses from "./User/RecommendedCourses";
+import ProfileSetting from "./User/ProfileSettings";
+import ChangePassword from "./User/ChangePassowrd";
+
+// Teachers
+import TeacherLogin from "./Teacher/TeacherLogin";
+import TeacherRegister from "./Teacher/TeacherRegister";
+import TeacherDashboard from "./Teacher/TeacherDashboard";
+import AddCourse from "./Teacher/AddCourse";
+import TeacherChangePassword from "./Teacher/TeacherChangePassowrd";
+import TeacherProfileSetting from "./Teacher/TeacherProfileSettings";
+import TeacherCourses from "./Teacher/TeacherCourses";
+import UserList from "./Teacher/UserList";
 
 function Main(){
     return (
@@ -29,6 +39,14 @@ function Main(){
             <Route path='/recommended-courses' element={<RecommendedCourses />}/>
             <Route path='/profile-settings' element={<ProfileSetting />}/>
             <Route path='/change-password' element={<ChangePassword />}/>
+            <Route path='/teacher-login' element={<TeacherLogin />}/>
+            <Route path='/teacher-register' element={<TeacherRegister />}/>
+            <Route path='/teacher-dashboard' element={<TeacherDashboard />}/>
+            <Route path='/add-courses' element={<AddCourse />}/>
+            <Route path='/teacher-courses' element={<TeacherCourses />}/>
+            <Route path='/my-users' element={<UserList />}/>
+            <Route path='/teacher-profile-settings' element={<TeacherProfileSetting />}/>
+            <Route path='/teacher-change-password' element={<TeacherChangePassword />}/>
         </Routes>
         <Footer />
         </>

@@ -1,11 +1,11 @@
-import Sidebar from "./Sidebar";
+import TeacherSidebar from "./TeacherSidebar";
 
-function ProfileSetting(){
+function TeacherProfileSetting(){
     return(
         <div className="container mt-4">
             <div className="row">
                 <aside className="col-md-3">
-                    <Sidebar />
+                    <TeacherSidebar />
                 </aside>
                 <section className="col-md-9">
                     <form action="" method="post">
@@ -25,6 +25,18 @@ function ProfileSetting(){
                                     </div>
                                 </div>
                                 <div className="mb-3 row">
+                                    <label htmlFor="profile-photo" className="col-sm-2 col-form-label">Profile Photo</label>
+                                    <div className="col-sm-10">
+                                        <input type="file" className="form-control" id="profile-photo" />
+                                    </div>
+                                </div>
+                                <div className="mb-3 row">
+                                    <label htmlFor="skill" className="col-sm-2 col-form-label">Skills</label>
+                                    <div className="col-sm-10">
+                                        <input type="text" className="form-control" id="skill" />
+                                    </div>
+                                </div>
+                                <div className="mb-3 row">
                                     <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
                                     <div className="col-sm-10">
                                         <input type="password" className="form-control" id="password" />
@@ -40,4 +52,4 @@ function ProfileSetting(){
     )
 }
 
-export default ProfileSetting;
+export default TeacherProfileSetting;

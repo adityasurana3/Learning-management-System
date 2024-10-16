@@ -1,10 +1,10 @@
-function UserRegister(){
+function TeacherRegister(){
     return (
         <div className="container mt-4">
             <div className="row">
                 <div className="col-6 offset-3">
                     <div className="card">
-                        <h5 className="card-header">User Register</h5>
+                        <h5 className="card-header">Teacher Register</h5>
                         <div className="card-body">
                         <form>
                             <div className="mb-3">
@@ -21,8 +21,8 @@ function UserRegister(){
                                 <input type="text" className="form-control" id="username" />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="interests" className="form-label">Interests</label>
-                                <textarea className="form-control" id="interests"aria-describedby="help"/>
+                                <label htmlFor="skill" className="form-label">Skils</label>
+                                <textarea className="form-control" id="skill"aria-describedby="help"/>
                                 <div id="help" className="form-text">Python, JavaScript</div>
                             </div>
                             <div className="mb-3">
@@ -39,4 +39,4 @@ function UserRegister(){
     )
 }
 
-export default UserRegister;
+export default TeacherRegister;
