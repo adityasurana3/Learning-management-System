@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
+
+// Users
 import UserRegister from "./User/UserRegister";
 import UserLogin from "./User/UserLogin";
 import Dashboard from "./User/Dashboard";
@@ -22,6 +24,7 @@ import TeacherChangePassword from "./Teacher/TeacherChangePassowrd";
 import TeacherProfileSetting from "./Teacher/TeacherProfileSettings";
 import TeacherCourses from "./Teacher/TeacherCourses";
 import UserList from "./Teacher/UserList";
+import TeacherDetail from "./TeacherDetail";
 
 function Main(){
     return (
@@ -47,6 +50,7 @@ function Main(){
             <Route path='/my-users' element={<UserList />}/>
             <Route path='/teacher-profile-settings' element={<TeacherProfileSetting />}/>
             <Route path='/teacher-change-password' element={<TeacherChangePassword />}/>
+            <Route path='/teacher-detail/:teacherId' element={<TeacherDetail />}/>
         </Routes>
         <Footer />
         </>
