@@ -25,6 +25,10 @@ import TeacherProfileSetting from "./Teacher/TeacherProfileSettings";
 import TeacherCourses from "./Teacher/TeacherCourses";
 import UserList from "./Teacher/UserList";
 import TeacherDetail from "./TeacherDetail";
+import AllCourses from "./AllCourses";
+import PopularCourses from "./PopularCourses";
+import PopularTeacher from "./PopularTeacher";
+import CategoryCourses from "./CategoryCourses";
 
 function Main(){
     return (
@@ -51,6 +55,10 @@ function Main(){
             <Route path='/teacher-profile-settings' element={<TeacherProfileSetting />}/>
             <Route path='/teacher-change-password' element={<TeacherChangePassword />}/>
             <Route path='/teacher-detail/:teacherId' element={<TeacherDetail />}/>
+            <Route path='/all-courses' element={<AllCourses />}/>
+            <Route path='/popular-courses' element={<PopularCourses />}/>
+            <Route path='/popular-teachers' element={<PopularTeacher />}/>
+            <Route path='/category-courses/:category_slug' element={<CategoryCourses />}/>
         </Routes>
         <Footer />
         </>

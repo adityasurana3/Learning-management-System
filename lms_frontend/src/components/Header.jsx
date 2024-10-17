@@ -12,7 +12,7 @@ function Header(){
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
                         <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                        <Link className="nav-link" to='/'>Courses</Link>
+                        <Link className="nav-link" to='/all-courses'>Courses</Link>
                         <Link className="nav-link" to="/about">About us</Link>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

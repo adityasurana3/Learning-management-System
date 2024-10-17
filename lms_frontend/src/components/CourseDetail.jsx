@@ -26,8 +26,23 @@ function CourseDetail() {
                     <li className="list-group-item">Introduction
                         <span className="float-end">
                             <span className="me-5">1 Hour 30 min</span>
-                            <button className="btn btn-sm btn-danger float-end"><i className="bi bi-play"></i></button>
+                            <button className="btn btn-sm btn-danger float-end" data-bs-toggle="modal" data-bs-target="#videomodal"><i className="bi bi-play"></i></button>
                         </span>
+                        <div className="modal fade" id="videomodal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div className="modal-dialog modal-xl">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div className="modal-body">
+                                        <div className="ratio ratio-16x9">
+                                            <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowFullScreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li className="list-group-item">Project Setup
                         <span className="float-end">
