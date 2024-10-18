@@ -2,8 +2,20 @@ import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import HeaderTitle from "./HeaderTitle";
 import CardFooter from "./CardFooter";
+import { useEffect, useState } from "react";
+import axios from 'axios'
 
+
+const BASE_URL = 'http://127.0.0.1:8000/api/'
 function PopularTeacher(){
+    const [teacher, setTeacher] = useState(null);
+
+    useEffect(() => {
+        axios.get(BASE_URL + 'teacher/').then((response) =>{
+            setTeacher(response.data)
+        })
+    }, [])
+    
     return(
         <div className="container mt-3">
             <HeaderTitle title="Popular Teacher" />

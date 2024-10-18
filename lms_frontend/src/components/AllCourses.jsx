@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import HeaderTitle from "./HeaderTitle";
+import { useEffect } from "react";
 
 function AllCourses(){
+    useEffect(() => {
+        document.title = "Courses"
+    })
     return(
         <div className="container mt-3">
             {/* Latest courses */}

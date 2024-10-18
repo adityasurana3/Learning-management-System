@@ -5,9 +5,11 @@ from django import forms
 class TeacherSerailizer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
-        fields = ['full_name', 'email', 'password', 'qualification', 'mobile_no', 'address']
+        fields = ['full_name', 'email', 'password', 'qualification', 'mobile_no', 'skills']
         
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = ['__all__']
+
+

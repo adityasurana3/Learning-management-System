@@ -1,6 +1,10 @@
+import { useEffect } from 'react';
 import {Link} from 'react-router-dom'
 
 function Home(){
+    useEffect(() =>{
+        document.title = "LMS"
+    })
     return (
         <div className="container mt-4">
             {/* Latest courses */}
