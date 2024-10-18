@@ -6,6 +6,8 @@ from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, permissions, authentication
 from rest_framework_simplejwt.authentication import JWTAuthentication
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 class TeacherListCreateAPIView(generics.ListCreateAPIView):
@@ -27,3 +29,15 @@ class Home(APIView):
     def get(self, request):
         content = {'message': 'Hello, World!'}
         return Response(content)
+
+
+@csrf_exempt
+def teacher_login(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        teacher = Teacher.objects.get(email=email, password=password)
+        if teacher:
+            return JsonResponse({'bool': True})
+        return JsonResponse({'bool':False})
+    
