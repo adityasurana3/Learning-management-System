@@ -1,6 +1,9 @@
 import TeacherSidebar from "./TeacherSidebar";
 
 function TeacherDashboard(){
+    if (localStorage.getItem('teacherLogin')){
+        window.location.href = '/teacher-login'
+    }
     return(
         <div className="container mt-4">
             <div className="row">
@@ -13,6 +16,9 @@ function TeacherDashboard(){
             </div>
         </div>
     )
+    
+
+    
 }
 
 export default TeacherDashboard;

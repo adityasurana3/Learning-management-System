@@ -21,7 +21,7 @@ function AddCourse(){
                                     <textarea className="form-control" id="description" />
                                 </div>
                                 <div className="mb-3 row">
-                                    <label htmlFor="course-video" className="col-sm-2 col-form-label">Course Video</label>
+                                    <label htmlFor="course-video" className="col-sm-2 col-form-label">Featured Image</label>
                                     <input type="file" className="form-control" id="course-video" />
                                 </div>
                                 <div className="mb-3 row">

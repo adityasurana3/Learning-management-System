@@ -50,9 +50,11 @@ function TeacherRegister(){
                 status: 'error'
             }));
         }
-        
     }
-
+    const teacerLoginStatus = localStorage.getItem('teacherLogin');
+    if (teacerLoginStatus){
+        window.location.href = '/teacher-dashboard'
+    }
     return (
         <div className="container mt-4">
             <div className="row">
